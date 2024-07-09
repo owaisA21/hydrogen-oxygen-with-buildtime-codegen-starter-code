@@ -45,6 +45,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sync Plasmic
+        run: npm run plasmic-sync
+
       - name: Build and Publish to Oxygen
         run: npx shopify hydrogen deploy
         env:
